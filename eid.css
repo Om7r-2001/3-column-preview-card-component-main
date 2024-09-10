@@ -1,0 +1,113 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-light-gray);
+  padding: 20px 0;
+}
+/* STYLE */
+.page {
+  width: 750px;
+}
+.container {
+  display: flex;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container > div {
+  flex-basis: calc(100% / 3);
+  padding: 35px 20px;
+}
+.sedans {
+  background-color: var(--Bright-orange);
+}
+.suvs {
+  background-color: var(--Dark-cyan);
+}
+.luxury {
+  background-color: var(--Very-dark-cyan);
+}
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  margin: 25px 0;
+  font-size: 40px;
+}
+p {
+  color: var(--Transparent-white);
+  line-height: 1.7;
+}
+p + a {
+  display: block;
+  text-decoration: none;
+  margin-top: 70px;
+  background-color: var(--Very-light-gray);
+  width: fit-content;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  border: 2px solid var(--Very-light-gray);
+  transition: 0.3s;
+}
+.sedans a {
+  color: var(--Bright-orange);
+}
+.suvs a {
+  color: var(--Dark-cyan);
+}
+.luxury a {
+  color: var(--Very-dark-cyan);
+}
+p + a:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+@media (max-width: 767px) {
+    .page {
+        width: 375px;
+      }
+    .container {
+        flex-direction: column;
+    }
+    .container > div {
+        padding: 40px;
+    }
+    p + a {
+        margin-top: 20px;
+    }
+}
